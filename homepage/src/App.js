@@ -58,7 +58,6 @@ class App extends Component {
                         <div id="home" />
                         <div id="nestedFragment" />
                         <div id="list" />
-                        <div id="angular-app"/>
                     </div>
                 </div>
             </div>

@@ -7,7 +7,6 @@ import {registerReactApp} from "./apps/header";
 import {registerHomeApp} from './apps/home';
 import {registerNestedApp} from './apps/nestedFragment'
 import {registerListApp} from './apps/list'
-import {registerAngularApp} from "./apps/angular-app";
 
 ReactDOM.render(<App/>, document.getElementById('root'));
 
@@ -16,6 +15,5 @@ registerReactApp();
 registerHomeApp();
 registerNestedApp();
 registerListApp();
-registerAngularApp();
 
 singleSpa.start();
