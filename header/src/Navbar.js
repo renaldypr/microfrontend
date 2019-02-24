@@ -8,8 +8,8 @@ export default class NavBar extends React.Component {
   render() {
     return (
       <div>
-        <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">reactstrap</NavbarBrand>
+        <Navbar style={{backgroundColor: '#4D51AB'}} expand="md">
+          <NavbarBrand href="#" style={{color: '#FFF'}}>Dashboard App</NavbarBrand>
         </Navbar>
       </div>
     );
