@@ -31,7 +31,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        <h1>List of Items with Pagination</h1>
+        <h1 className="title">List of Items with Pagination</h1>
         {
           this.state.error &&
           <Alert color="danger">
@@ -41,37 +41,41 @@ class App extends Component {
         {
           this.state.currentList.length ?
           <Fragment>
-            <Table striped responsive>
-              <thead>
-                <tr>
-                  <th>ID</th>
-                  <th>User ID</th>
-                  <th>Title</th>
-                </tr>
-              </thead>
-              <tbody>
+            <div className="container">
+              <Table striped responsive>
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>User ID</th>
+                    <th>Title</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {
+                    this.state.currentList.map((list) => (
+                      <tr>
+                        <td>{list.id}</td>
+                        <td>{list.userId}</td>
+                        <td>{list.title}</td>
+                      </tr>
+                    ))
+                  }
+                </tbody>
+              </Table>
+            </div>
+            <div className="pagination">
+              <Pagination>
                 {
-                  this.state.currentList.map((list) => (
-                    <tr>
-                      <td>{list.id}</td>
-                      <td>{list.userId}</td>
-                      <td>{list.title}</td>
-                    </tr>
+                  paginationLength.map(each => (
+                    <PaginationItem>
+                      <PaginationLink onClick={this.onChangePage(each+1)}>
+                        {each+1}
+                      </PaginationLink>
+                    </PaginationItem>
                   ))
                 }
-              </tbody>
-            </Table>
-            <Pagination>
-              {
-                paginationLength.map(each => (
-                  <PaginationItem>
-                    <PaginationLink onClick={this.onChangePage(each+1)}>
-                      {each+1}
-                    </PaginationLink>
-                  </PaginationItem>
-                ))
-              }
-            </Pagination>
+              </Pagination>
+            </div>
           </Fragment>
           : <span>Loading...</span>
         }
