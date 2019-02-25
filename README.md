@@ -38,13 +38,13 @@ npm run build
 npm run serve
 ```
 
-Access through **localhost:3000**.
+Access through *localhost:3000*.
 
 ## Deployment
 
 You can visit the deployment of this app through [here](http://microfrontend.renaldypratama.xyz/) or [here](http://34.73.84.84/)
 
-**currently accessible through http only**
+*currently accessible through http only*
 
 ## Authors
 
